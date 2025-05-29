@@ -3,9 +3,23 @@ import ReactDOM from "react-dom/client";
 import "./Alert.scss";
 import { ALERT_GO_BACK, ALERT_LEAVE_BUTTON, ALERT_STAY_BUTTON, ALERT_TEXT__DARK, ALERT_TEXT__DARK_2, ALERT_TEXT__LIGHT, TYPE_PHRASE } from "../CONSTANTS/texts";
 
+
 function Alert({ updateViolations }: { updateViolations: any }) {
   const [isMore, setIsMore] = useState(false);
   const logo = chrome.runtime.getURL("images/recenter_logo.png");
+  
+  const PHRASES = [
+    "Let Me Browse Please",
+    "I'm Sure I Need This",
+    "Give Me Some More Time",
+    "Just One More Scroll",
+    "I Know What I'm Doing",
+    "I'll Stop After This"
+  ];
+  const [requiredPhrase] = useState(
+    PHRASES[Math.floor(Math.random() * PHRASES.length)]
+  );
+
   function onClose() {
     const root = document.getElementById("recenter_container");
     if (root) {
@@ -23,7 +37,7 @@ function Alert({ updateViolations }: { updateViolations: any }) {
     const input = document.getElementById(
       "non_blocking_alert__more_content__phrase__input"
     ) as HTMLInputElement;
-    if (!input || input.value.toLowerCase() !== "let me browse") {
+    if (!input || input.value !== requiredPhrase) {
       return;
     }
     const root = document.getElementById("recenter_container");
@@ -70,11 +84,15 @@ function Alert({ updateViolations }: { updateViolations: any }) {
         <div id="non_blocking_alert__more_content">
           <div id="non_blocking_alert__more_content__phrase">
             <div id="non_blocking_alert__more_content__phrase__label">
-              {TYPE_PHRASE}
+              {TYPE_PHRASE} <strong>{`"${requiredPhrase}"`}</strong> to confirm
             </div>
             <input
               id="non_blocking_alert__more_content__phrase__input"
               type="text"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck={false}
               onChange={handleViolation}
             />
           </div>

@@ -10,7 +10,7 @@ export const ALERT_TEXT__DARK = "Let's Get Back to Work.";
 export const ALERT_TEXT__DARK_2 = "You got this!";
 export const ALERT_ACTIVITY =
   "Here is a quick activity to get you back to focus. Step away from the computer and try 5 pushups.";
-export const TYPE_PHRASE = "Type the phrase “Let Me Browse” to confirm";
+export const TYPE_PHRASE = "Type the phrase";
 export const ALERT_GO_BACK = "You can still get Back to Work";
 export const ALERT_LEAVE_BUTTON = "Let's Go";
 export const ALERT_STAY_BUTTON = "Maybe Later";

@@ -1,8 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
-var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/utils/CONSTANTS/ChatGPT.ts
+;// ./src/utils/CONSTANTS/ChatGPT.ts
 // ChatGPT CONSTANTS
 const baseUrl = "https://api.openai.com/v1";
 const model = "gpt-3.5-turbo-0125";
@@ -24,7 +23,7 @@ const DAILY_RECAP_PROMPT = (history, productivePercentage) => {
   This is the browser history in a certain time period. Summarize this into a simple 7-8 sentence summary. The goal of this summary is to help the user realize what they have been browsing and if that is wasteful. This should encourage them to spend less time on wasteful non-productive sites. This is also a summary for the previous day and can say so. It is implicit that this is the browser history so need not be mentioned. This can be funny. This should be in accessible english and speak directly to the user and refer to them as "you". Pay special attention to any interesting titles and use those in commenting on what the user might have been doing. Have an unusual introduction and a cold-open to the summary. Acknowledge how well the user spent time overall without referring to the percentage`;
 };
 
-;// CONCATENATED MODULE: ./src/utils/queryStorage/UpdateWebsitesInStorage.ts
+;// ./src/utils/queryStorage/UpdateWebsitesInStorage.ts
 /*
 Function to update websites in storage
 */
@@ -66,7 +65,7 @@ function updateWebsitesInStorage(websites) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/chatGPT/EstimatedCost.ts
+;// ./src/utils/chatGPT/EstimatedCost.ts
 var EstimatedCost_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -127,7 +126,7 @@ function estimatedCost(inputToken, outputToken, purpose) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/chatGPT/AITagging.ts
+;// ./src/utils/chatGPT/AITagging.ts
 var AITagging_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -246,7 +245,7 @@ function AITagging() {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/CONSTANTS/texts.ts
+;// ./src/utils/CONSTANTS/texts.ts
 const NO_API_KEY_SUMMARY = "Please enter an OPENAI API Key to create and display summaries. Here's <a href='https://community.openai.com/t/how-do-i-get-my-api-key/29343' rel='noreferrer' target='_blank'>how to get one</a>";
 const API_CALL_FAILED_SUMMARY = "Whoops, couldn't generate a summary. Not sure why.";
 const SUMMARY_TIME_TOO_SHORT = "Looks like you didn't browse for long enough for a summary. That's probably a good thing!";
@@ -255,7 +254,7 @@ const ALERT_TEXT__LIGHT = "Feeling Distracted?";
 const ALERT_TEXT__DARK = "Let's Get Back to Work.";
 const ALERT_TEXT__DARK_2 = "You got this!";
 const ALERT_ACTIVITY = "Here is a quick activity to get you back to focus. Step away from the computer and try 5 pushups.";
-const TYPE_PHRASE = "Type the phrase “Let Me Browse” to confirm";
+const TYPE_PHRASE = "Type the phrase";
 const ALERT_GO_BACK = "You can still get Back to Work";
 const ALERT_LEAVE_BUTTON = "Let's Go";
 const ALERT_STAY_BUTTON = "Maybe Later";
@@ -277,7 +276,7 @@ const focusMessage = [
     { line1: "You're a zen master!", line2: "On top of the world!" },
 ];
 
-;// CONCATENATED MODULE: ./src/utils/queryStorage/GetTaggedTime.ts
+;// ./src/utils/queryStorage/GetTaggedTime.ts
 /*
 Function to get the time of the user on a website along with tag
 */
@@ -341,7 +340,7 @@ function getTaggedTime(type) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/scripts/mmToHM.ts
+;// ./src/utils/scripts/mmToHM.ts
 function msToHM(ms) {
     // 1- Convert to seconds:
     let seconds = Math.floor(ms / 1000);
@@ -362,7 +361,7 @@ function msToHM(ms) {
     return `${hours}h ${minutes}m`;
 }
 
-;// CONCATENATED MODULE: ./src/utils/scripts/processHistory.ts
+;// ./src/utils/scripts/processHistory.ts
 var processHistory_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -456,7 +455,7 @@ function removeLessSignificantTerms(organizedHistory) {
     return organizedHistory;
 }
 
-;// CONCATENATED MODULE: ./src/utils/chatGPT/API_CALL.ts
+;// ./src/utils/chatGPT/API_CALL.ts
 var API_CALL_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -517,7 +516,7 @@ function apiCallWithTimeout(prompt, timeout = 30000, purpose, authKey) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/chatGPT/DailyRecap.ts
+;// ./src/utils/chatGPT/DailyRecap.ts
 var DailyRecap_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -590,7 +589,7 @@ function prevDaySummary(history, authKey, date, focusRate) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/chatGPT/HourlyRecap.ts
+;// ./src/utils/chatGPT/HourlyRecap.ts
 var HourlyRecap_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -700,7 +699,7 @@ function prevHourSummary(history, authKey, date, productiveTime) {
     });
 }
 
-;// CONCATENATED MODULE: ./src/utils/scripts/setBadgeText.ts
+;// ./src/utils/scripts/setBadgeText.ts
 function setBadgeText(time, tabId) {
     chrome.action.setBadgeText({ text: getTime(time), tabId: tabId });
 }
@@ -716,7 +715,7 @@ function getTime(time) {
         return `${hours}h`;
 }
 
-;// CONCATENATED MODULE: ./src/utils/main/WebTime.ts
+;// ./src/utils/main/WebTime.ts
 /*
     Monitor user activity and store the time spent on websites
 */
@@ -971,7 +970,7 @@ class WebTime {
     }
 }
 
-;// CONCATENATED MODULE: ./src/background.ts
+;// ./src/background.ts
 var background_awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
